@@ -18,13 +18,21 @@
 
     <p>Osoite: <input type="text" id="osoite"></p>
 
-    <label for="maa">Maa: </label> <select name="maa" id="maa"></select>
-
+    <label for="maa">Maa: </label> 
+    <select name="maa" id="maa">
+        <option value="Suomi">Suomi</option>
+        <option value="Muu kuin Suomi">Muu kuin Suomi</option>
+    </select>
 
     <p>Postinumero: <input type="text" id="postinumero"></p>
 
     <p>Sähköposti: <input type="text" id="sahkoposti"></p>
 
     <p>Sukupuoli: <input type="radio" id="mies" name="sukupuoli">Mies<input type="radio" id="nainen" name="sukupuoli">Nainen<input type="radio" id="muu" name="sukupuoli">Muu</p>
+
+    <p>Kieli: <input type="checkbox" id="suomi" name="kieli">Suomi<input type="checkbox" id="muu" name="kieli">Muu kuin suomi</p>
+
+    <p>Lisätietoja: <input type="">
+    </p>
 </body>
 </html>
