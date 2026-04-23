@@ -12,28 +12,51 @@
 
     <p>Käyttäjä ID: <input type="text" id="kayttaja"></p>
 
+    <p id="virhe1"></p>
+
     <p>Salasana: <input type="text" id="salasana"></p>
+
+    <p id="virhe2"></p>
 
     <p>Nimi: <input type="text" id="nimi"></p>
 
+    <p id="virhe3"></p>
+
     <p>Osoite: <input type="text" id="osoite"></p>
+
+    <p id="virhe4"></p>
 
     <label for="maa">Maa: </label> 
     <select name="maa" id="maa">
+        <option value="Valitse maa">(Valitse maa)</option>
         <option value="Suomi">Suomi</option>
         <option value="Muu kuin Suomi">Muu kuin Suomi</option>
     </select>
 
+    <p id="virhe5"></p>
+
     <p>Postinumero: <input type="text" id="postinumero"></p>
+
+    <p id="virhe6"></p>
 
     <p>Sähköposti: <input type="text" id="sahkoposti"></p>
 
-    <p>Sukupuoli: <input type="radio" id="mies" name="sukupuoli">Mies<input type="radio" id="nainen" name="sukupuoli">Nainen<input type="radio" id="muu" name="sukupuoli">Muu</p>
+    <p id="virhe7"></p>
+
+    <p>Sukupuoli: <input type="radio" id="mies" name="sukupuoli">Mies<input type="radio" id="nainen" name="sukupuoli">Nainen</p>
+
+    <p id="virhe8"></p>
 
     <p>Kieli: <input type="checkbox" id="suomi" name="kieli">Suomi<input type="checkbox" id="muu" name="kieli">Muu kuin suomi</p>
 
+    <p id="virhe9"></p>
+
     <p>Lisätietoja: <input type=""></p>
 
+    <button onclick="tarkista()">Lähetä</button>
+
     <p id="tulos"></p>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
