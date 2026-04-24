@@ -6,61 +6,96 @@ function tarkista() {
     let maa = document.getElementById("maa").value;
     let posti = document.getElementById("postinumero").value;
     let sahkoposti = document.getElementById("sahkoposti").value;
-    let sukupuoli = document.getElementById("sukupuoli").value;
-    let kieli = document.getElementById("kieli").value;
+    let sukupuoli = document.querySelector("input[name]")
 
     if (ID === "") {
         document.getElementById("virhe1").textContent =
         "tämä kenttä on pakollinen!";
-        return;
+
+    }
+    else {
+        document.getElementById("virhe1").textContent =
+        "";
     }
 
-    if (salasana = "") {
+    if (salasana === "") {
         document.getElementById("virhe2").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe2").textContent =
+        "";
     }
 
-    if (nimi = "") {
+    if (nimi === "") {
         document.getElementById("virhe3").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe3").textContent =
+        "";
     }
 
-    if (osoite = "") {
+    if (osoite === "") {
         document.getElementById("virhe4").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe4").textContent =
+        "";
     }
 
-    if (maa = "(Valitse maa)") {
+    if (maa === "Valitse maa") {
         document.getElementById("virhe5").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe5").textContent =
+        "";
     }
 
-    if (posti = "") {
+    if (posti === "") {
         document.getElementById("virhe6").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe6").textContent =
+        "";
     }
 
-    if (sahkoposti = "") {
+    if (sahkoposti === "") {
         document.getElementById("virhe7").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe7").textContent =
+        "";
     }
 
-    if (sukupuoli = "") {
+    if (sukupuoli === "") {
         document.getElementById("virhe8").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe8").textContent =
+        "";
     }
 
-    if (kieli = "") {
+    if (kieli === "") {
         document.getElementById("virhe9").textContent =
         "tämä kenttä on pakollinen!";
-        return
+
+    }
+    else {
+        document.getElementById("virhe9").textContent =
+        "";
     }
 
 }
