@@ -7,22 +7,34 @@ function tarkista() {
     let posti = document.getElementById("postinumero").value;
     let sahkoposti = document.getElementById("sahkoposti").value;
     let sukupuoli = document.querySelector("input[name]")
+    let numerot = /\d/;
 
     if (ID === "") {
         document.getElementById("virhe1").textContent =
         "tämä kenttä on pakollinen!";
 
     }
+    else if (ID.length < 6) {
+        document.getElementById("virhe1").textContent =
+        "käyttäjän ID pitää olla vähintään 6 merkkiä pitkä!"
+    }
     else {
         document.getElementById("virhe1").textContent =
         "";
     }
-
+    
     if (salasana === "") {
         document.getElementById("virhe2").textContent =
         "tämä kenttä on pakollinen!";
 
     }
+
+    else if (salasana.length < 6) {
+        document.getElementById("virhe2").textContent =
+        "salasanan pitää olla vähintään 6 merkkiä pitkä!"
+    }
+
+    
     else {
         document.getElementById("virhe2").textContent =
         "";
