@@ -6,8 +6,10 @@ function tarkista() {
     let maa = document.getElementById("maa").value;
     let posti = document.getElementById("postinumero").value;
     let sahkoposti = document.getElementById("sahkoposti").value;
-    let sukupuoli = document.querySelector("input[name]")
+    let sukupuoli = document.querySelector("input[name]").value;
     let numerot = /\d/;
+    let erikoismerkit = /[!@£$€&%#]/;
+    let isotkirjaimet = /[A-Z]/;
 
     if (ID === "") {
         document.getElementById("virhe1").textContent =
@@ -34,6 +36,12 @@ function tarkista() {
         "salasanan pitää olla vähintään 6 merkkiä pitkä!"
     }
 
+    else if (!numerot.test(salasana) 
+    ||!erikoismerkit.test(salasana)
+    ||!isotkirjaimet.test(salasana)) {
+        document.getElementById("virhe2").textContent =
+        "salasanassa pitää olla vähintään yksi iso kirjain, numero ja erikoismerkki!"
+    }
     
     else {
         document.getElementById("virhe2").textContent =
@@ -97,7 +105,7 @@ function tarkista() {
     }
     else {
         document.getElementById("virhe8").textContent =
-        "";
+        sukupuoli;
     }
 
     if (kieli === "") {
