@@ -6,7 +6,8 @@ function tarkista() {
     let maa = document.getElementById("maa").value;
     let posti = document.getElementById("postinumero").value;
     let sahkoposti = document.getElementById("sahkoposti").value;
-    var sukupuoli = document.getElementById("sukupuoli");
+    var mies = document.getElementById("mies");
+    var nainen = document.getElementById("nainen");
     var kieli = document.getElementById("kieli");
     let numerot = /\d/;
     let erikoismerkit = /[!@£$€&%#]/;
@@ -99,14 +100,21 @@ function tarkista() {
         "";
     }
 
-    if (sukupuoli.checked == false) {
-        document.getElementById("virhe8").textContent =
-        "tämä kenttä on pakollinen!";
-
-    }
-    else {
+    if (mies.checked == true) {
         document.getElementById("virhe8").textContent =
         "";
+
+    }
+
+    else if (nainen.checked == true) {
+        document.getElementById("virhe8").textContent =
+        "";
+
+    }
+
+    else {
+        document.getElementById("virhe8").textContent =
+        "tämä kenttä on pakollinen!";
     }
 
     if (kieli.checked == false) {
