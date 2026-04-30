@@ -5,6 +5,7 @@ function tarkista() {
     let osoite = document.getElementById("osoite").value;
     let maa = document.getElementById("maa").value;
     let posti = document.getElementById("postinumero").value;
+    let postinumero = /^\d+$/.test(posti);
     let sahkoposti = document.getElementById("sahkoposti").value;
     var mies = document.getElementById("mies");
     var nainen = document.getElementById("nainen");
@@ -84,6 +85,14 @@ function tarkista() {
         document.getElementById("virhe6").textContent =
         "tämä kenttä on pakollinen!";
 
+    }
+    else if (postinumero === false) {
+        document.getElementById("virhe6").textContent =
+        "postinumeron pitää koostua vain numeroista!"
+    }
+    else if (posti.length != 5) {
+        document.getElementById("virhe6").textContent =
+        "postinumerossa pitää olla 5 numeroa!"
     }
     else {
         document.getElementById("virhe6").textContent =
