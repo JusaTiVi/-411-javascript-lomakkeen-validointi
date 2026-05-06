@@ -7,9 +7,9 @@ function tarkista() {
     let posti = document.getElementById("postinumero").value;
     let postinumero = /^\d+$/.test(posti);
     let sahkoposti = document.getElementById("sahkoposti").value;
+    let sahkopostitesti = /\S+@\S+\.\S+/.test(sahkoposti);
     var mies = document.getElementById("mies");
     var nainen = document.getElementById("nainen");
-    var kieli = document.getElementById("kieli");
     let numerot = /\d/;
     let erikoismerkit = /[!@£$€&%#]/;
     let isotkirjaimet = /[A-Z]/;
@@ -103,6 +103,10 @@ function tarkista() {
         document.getElementById("virhe7").textContent =
         "tämä kenttä on pakollinen!";
 
+    }
+    else if (sahkopostitesti === false) {
+        document.getElementById("virhe7").textContent =
+        "antamasi kirjainjono ei ole sähköpostiosoitteen muotoinen!"
     }
     else {
         document.getElementById("virhe7").textContent =
