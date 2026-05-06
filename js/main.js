@@ -126,14 +126,19 @@ function tarkista() {
         "tämä kenttä on pakollinen!";
     }
 
-    if (kieli.checked == false) {
+    if (muukieli.checked == true) {
         document.getElementById("virhe9").textContent =
-        "tämä kenttä on pakollinen!";
+        "";
+
+    }
+    else if (suomi.checked == true) {
+        document.getElementById("virhe9").textContent =
+        "";
 
     }
     else {
         document.getElementById("virhe9").textContent =
-        "";
+        "tämä kenttä on pakollinen!";
     }
 
 }
